@@ -169,7 +169,15 @@ button {
 }
 
 .hero-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
   padding: 6rem 0 4.5rem;
+}
+
+.hero-copy {
+  max-width: 42rem;
 }
 
 .eyebrow {
@@ -217,6 +225,55 @@ button {
   max-width: 47rem;
   margin: 1.25rem 0 0;
   font-size: 1.03rem;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-photo-frame {
+  position: relative;
+  width: min(24rem, 72vw);
+  aspect-ratio: 1;
+  padding: 0.7rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    145deg,
+    rgba(191, 107, 255, 0.9),
+    rgba(89, 215, 255, 0.9)
+  );
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 34px 90px -40px rgba(89, 215, 255, 0.65),
+    0 18px 64px -30px rgba(191, 107, 255, 0.7);
+}
+
+.hero-photo-frame::before {
+  content: "";
+  position: absolute;
+  inset: 1.2rem;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  pointer-events: none;
+}
+
+.hero-photo-core {
+  width: 100%;
+  height: 100%;
+  padding: 0.35rem;
+  border-radius: 50%;
+  background: rgba(12, 10, 20, 0.96);
+}
+
+.hero-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 24%;
+  background: #12101c;
 }
 
 .hero-actions {
@@ -691,6 +748,25 @@ button {
 }
 
 @media (max-width: 960px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .hero-copy {
+    max-width: 46rem;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
   .interest-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -763,6 +839,10 @@ button {
   .contact-chip,
   .button {
     width: 100%;
+  }
+
+  .hero-photo-frame {
+    width: min(18rem, 78vw);
   }
 }
 

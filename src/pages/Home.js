@@ -4,6 +4,8 @@ import { portfolioLinks, researchInterests } from "../data/siteData";
 import Icon from "../components/Icon";
 
 function Home() {
+  const profilePhotoUrl = `${import.meta.env.BASE_URL}pfp.jpg`;
+
   useEffect(() => {
     document.title = "Vinay Patil — ML & AI Enthusiast";
   }, []);
@@ -12,25 +14,39 @@ function Home() {
     <div>
       <section className="hero-section">
         <div className="container hero-content fade-up">
-          <p className="eyebrow">Hi, I&apos;m</p>
-          <h1 className="hero-title">
-            Vinay <span className="gradient-text">Patil</span>
-          </h1>
-          <p className="hero-subtitle">CS Undergrad at Mahindra University</p>
-          <p className="hero-description">
-            I&apos;m a 3rd-year CS student passionate about LLMs, NLP, and
-            building AI-powered applications. Currently exploring transformer
-            architectures, RAG systems, and generative AI.
-          </p>
+          <div className="hero-copy">
+            <p className="eyebrow">Hi, I&apos;m</p>
+            <h1 className="hero-title">
+              Vinay <span className="gradient-text">Patil</span>
+            </h1>
+            <p className="hero-subtitle">CS Undergrad at Mahindra University</p>
+            <p className="hero-description">
+              I&apos;m a 3rd-year CS student passionate about LLMs, NLP, and
+              building AI-powered applications. Currently exploring transformer
+              architectures, RAG systems, and generative AI.
+            </p>
 
-          <div className="hero-actions">
-            <Link to="/projects" className="button button-primary">
-              View Projects
-              <Icon name="arrow-right" className="button-icon" />
-            </Link>
-            <Link to="/about" className="button button-secondary">
-              About Me
-            </Link>
+            <div className="hero-actions">
+              <Link to="/projects" className="button button-primary">
+                View Projects
+                <Icon name="arrow-right" className="button-icon" />
+              </Link>
+              <Link to="/about" className="button button-secondary">
+                About Me
+              </Link>
+            </div>
+          </div>
+
+          <div className="hero-visual">
+            <div className="hero-photo-frame">
+              <div className="hero-photo-core">
+                <img
+                  src={profilePhotoUrl}
+                  alt="Portrait of Vinay Patil"
+                  className="hero-photo"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
