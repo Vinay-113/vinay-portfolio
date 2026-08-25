@@ -15,6 +15,22 @@ export const researchInterests = [
 
 export const projects = [
   {
+    title: "CredIntel AI",
+    subtitle: "Explainable AI Underwriting Platform",
+    description:
+      "An explainable, real-time underwriting system for new-to-credit applicants that combines consented alternative-data signals, an interpretable repayment model, fraud controls, deterministic policy checks, and human review in one auditable decision workflow.",
+    tags: [
+      "React",
+      "Spring Boot",
+      "PostgreSQL",
+      "pgvector",
+      "Bedrock",
+      "Responsible AI"
+    ],
+    github: "https://github.com/Vinay-113/credintel-ai",
+    live: "https://vinay-113.github.io/credintel-ai/"
+  },
+  {
     title: "MovieMate",
     subtitle: "Conversational RAG Movie Chatbot",
     description:

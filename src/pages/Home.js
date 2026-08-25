@@ -19,9 +19,9 @@ function Home() {
             <h1 className="hero-title">
               Vinay <span className="gradient-text">Patil</span>
             </h1>
-            <p className="hero-subtitle">CS Undergrad at Mahindra University</p>
+            <p className="hero-subtitle">4th-Year CSE Student at Mahindra University</p>
             <p className="hero-description">
-              I&apos;m a 3rd-year CS student passionate about LLMs, NLP, and
+              I&apos;m a 4th-year CS student passionate about LLMs, NLP, and
               building AI-powered applications. Currently exploring transformer
               architectures, RAG systems, and generative AI.
             </p>
